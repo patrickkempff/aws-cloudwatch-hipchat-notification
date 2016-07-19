@@ -5,7 +5,7 @@ var https = require('https');
 // See for more information https://www.hipchat.com/admin/api
 var config = {
     'apikey': 'XXXXXXXXXXXXXXXXXXXXXXXXXX',
-    'chatroom': '12345678'
+    'chatroom_id': '12345678'
 }
 
 exports.handler = function(event, context) {
@@ -29,7 +29,7 @@ exports.handler = function(event, context) {
         host: 'api.hipchat.com',
         method: 'POST',
         port: 443,
-        path: '/v2/room/' + config.chatroom + '/notification?auth_token=' + config.apikey,
+        path: '/v2/room/' + config.chatroom_id + '/notification?auth_token=' + config.apikey,
         headers: {
             'Content-Type': 'application/json',
         }
