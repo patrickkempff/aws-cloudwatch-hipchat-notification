@@ -1,6 +1,13 @@
 // Dependencies
 var https = require('https');
 
+// HipChat config; update with your data. 
+// See for more information https://www.hipchat.com/admin/api
+var config = {
+    'apikey': 'XXXXXXXXXXXXXXXXXXXXXXXXXX',
+    'chatroom': '12345678'
+}
+
 exports.handler = function(event, context) {
 
     if ( ! event || ! event.Records || ! Array.isArray(event.Records) || event.Records.length < 1 ) {
