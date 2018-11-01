@@ -63,4 +63,6 @@ The can use the following output to test the lambda function:
   ]
 }
 ````
-  
+###  Why the fork?
+
+Supporting manual invoking through SNS
